@@ -6,7 +6,7 @@ import { ComponentCard } from "./ComponentCard"
 import { Search } from "lucide-react"
 import { cn } from "@/lib/utils"
 
-const categories: ComponentCategory[] = ['Buttons', 'Cards', 'Loaders', 'Navbars'];
+const categories: ComponentCategory[] = ['Buttons', 'Cards', 'Loaders', 'Navbars', 'Animations'];
 
 export function Gallery() {
   const [activeCategory, setActiveCategory] = React.useState<ComponentCategory | 'All'>('All');
