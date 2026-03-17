@@ -1,4 +1,4 @@
-export type ComponentCategory = 'Buttons' | 'Cards' | 'Loaders' | 'Navbars';
+export type ComponentCategory = 'Buttons' | 'Cards' | 'Loaders' | 'Navbars' | 'Animations';
 
 export interface ComponentData {
   id: string;
@@ -90,6 +90,37 @@ export const componentsData: ComponentData[] = [
       react: `export default function FloatingNav() {\n  return (\n    <nav className="glass px-6 py-3 rounded-full flex items-center gap-6">\n      <a href="#" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Home</a>\n      <a href="#" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">About</a>\n      <a href="#" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Projects</a>\n      <button className="px-4 py-1.5 rounded-full bg-primary text-primary-foreground text-sm font-medium ml-4">Contact</button>\n    </nav>\n  );\n}`,
       html: `<!-- HTML equivalent for Floating Nav -->`,
       tailwind: `/* Uses .glass utility */`
+    }
+  },
+  {
+    id: "anim-liquid-loop",
+    numericId: "131006",
+    title: "Liquid Loop Animation",
+    category: "Animations",
+    tags: ["3d", "liquid", "animated", "loop"],
+    author: "User",
+    views: 0,
+    componentPath: "Animations/LiquidLoopAnimation",
+    code: {
+      react: `import React from 'react';
+import { motion } from 'framer-motion';
+
+const LiquidLoopAnimation = ({ size = "400px", rotationSpeed = 20, floatIntensity = 20 }) => {
+  return (
+    <div className="relative flex items-center justify-center w-full h-[600px] bg-black overflow-hidden rounded-xl">
+      <div className="absolute rounded-full opacity-30 blur-[120px]" style={{ width: \`calc(\${size} * 1.5)\`, height: \`calc(\${size} * 1.5)\`, background: 'radial-gradient(circle, rgba(59, 130, 246, 0.8) 0%, rgba(0, 0, 0, 0) 70%)' }} />
+      <motion.div style={{ width: size, height: size }} className="relative z-10 cursor-pointer" animate={{ y: [0, -floatIntensity, 0], scale: [1, 1.05, 1] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }} whileHover={{ scale: 1.1, rotate: 5 }}>
+        <motion.div className="w-full h-full" animate={{ rotate: 360 }} transition={{ duration: rotationSpeed, repeat: Infinity, ease: "linear" }}>
+          <img src="https://m.media-amazon.com/images/I/61Nl2+n1VXL._AC_UF894,1000_QL80_.jpg" alt="Liquid Loop" className="w-full h-full object-contain drop-shadow-[0_0_30px_rgba(59,130,246,0.5)]" />
+        </motion.div>
+      </motion.div>
+      <div className="absolute inset-0 pointer-events-none opacity-10" style={{ background: 'linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0) 50%)' }} />
+    </div>
+  );
+};
+export default LiquidLoopAnimation;`,
+      html: ``,
+      tailwind: `/* None required */`
     }
   }
 ];
