@@ -10,6 +10,7 @@ import GradientButton from "@/components/previews/Buttons/GradientButton"
 import ProfileCard from "@/components/previews/Cards/ProfileCard"
 import NeonSpinner from "@/components/previews/Loaders/NeonSpinner"
 import FloatingNav from "@/components/previews/Navbars/FloatingNav"
+import LiquidLoopAnimation from "@/components/previews/Animations/LiquidLoopAnimation"
 
 const componentMap: Record<string, React.ElementType> = {
   "Buttons/GlassButton": GlassButton,
@@ -17,6 +18,7 @@ const componentMap: Record<string, React.ElementType> = {
   "Cards/ProfileCard": ProfileCard,
   "Loaders/NeonSpinner": NeonSpinner,
   "Navbars/FloatingNav": FloatingNav,
+  "Animations/LiquidLoopAnimation": LiquidLoopAnimation,
 }
 
 export default async function ComponentPage(props: { params: Promise<{ id: string }> }) {
