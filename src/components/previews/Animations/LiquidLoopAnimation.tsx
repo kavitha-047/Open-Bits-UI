@@ -58,7 +58,7 @@ const LiquidLoopAnimation = ({
         >
           {/* Glassy Liquid Image */}
           <img
-            src="https://m.media-amazon.com/images/I/61Nl2+n1VXL._AC_UF894,1000_QL80_.jpg" 
+            src="/liqud loop.png"
             alt="Liquid Loop"
             className="w-full h-full object-contain drop-shadow-[0_0_30px_rgba(59,130,246,0.5)]"
           />
