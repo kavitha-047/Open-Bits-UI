@@ -14,7 +14,7 @@ const LiquidLoopOrb: React.FC<LiquidLoopOrbProps> = ({
   intensity = 1,
   rotationSpeed = 40,
   glowColor = 'rgba(59, 130, 246, 0.6)',
-  imageSrc = '/liqud loop.png'
+  imageSrc = '/liquid-loop.png'
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
 

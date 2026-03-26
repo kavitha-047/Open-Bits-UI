@@ -111,7 +111,7 @@ const LiquidLoopAnimation = ({ size = "400px", rotationSpeed = 20, floatIntensit
       <div className="absolute rounded-full opacity-30 blur-[120px]" style={{ width: \`calc(\${size} * 1.5)\`, height: \`calc(\${size} * 1.5)\`, background: 'radial-gradient(circle, rgba(59, 130, 246, 0.8) 0%, rgba(0, 0, 0, 0) 70%)' }} />
       <motion.div style={{ width: size, height: size }} className="relative z-10 cursor-pointer" animate={{ y: [0, -floatIntensity, 0], scale: [1, 1.05, 1] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }} whileHover={{ scale: 1.1, rotate: 5 }}>
         <motion.div className="w-full h-full" animate={{ rotate: 360 }} transition={{ duration: rotationSpeed, repeat: Infinity, ease: "linear" }}>
-          <img src="/liqud loop.png" alt="Liquid Loop" className="w-full h-full object-contain drop-shadow-[0_0_30px_rgba(59,130,246,0.5)]" />
+          <img src="/liquid-loop.png" alt="Liquid Loop" className="w-full h-full object-contain drop-shadow-[0_0_30px_rgba(59,130,246,0.5)]" />
         </motion.div>
       </motion.div>
       <div className="absolute inset-0 pointer-events-none opacity-10" style={{ background: 'linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0) 50%)' }} />
@@ -144,7 +144,7 @@ export interface LiquidLoopOrbProps {
   imageSrc?: string;
 }
 
-const LiquidLoopOrb: React.FC<LiquidLoopOrbProps> = ({ size = 600, intensity = 1, rotationSpeed = 40, glowColor = 'rgba(59, 130, 246, 0.6)', imageSrc = '/liqud loop.png' }) => {
+const LiquidLoopOrb: React.FC<LiquidLoopOrbProps> = ({ size = 600, intensity = 1, rotationSpeed = 40, glowColor = 'rgba(59, 130, 246, 0.6)', imageSrc = '/liquid-loop.png' }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
