@@ -12,6 +12,7 @@ import ProfileCard from "@/components/previews/Cards/ProfileCard"
 import NeonSpinner from "@/components/previews/Loaders/NeonSpinner"
 import FloatingNav from "@/components/previews/Navbars/FloatingNav"
 import LiquidLoopAnimation from "@/components/previews/Animations/LiquidLoopAnimation"
+import LiquidLoopOrb from "@/components/previews/Animations/LiquidLoopOrb"
 
 const componentMap: Record<string, React.ElementType> = {
   "Buttons/GlassButton": GlassButton,
@@ -20,6 +21,7 @@ const componentMap: Record<string, React.ElementType> = {
   "Loaders/NeonSpinner": NeonSpinner,
   "Navbars/FloatingNav": FloatingNav,
   "Animations/LiquidLoopAnimation": LiquidLoopAnimation,
+  "Animations/LiquidLoopOrb": LiquidLoopOrb,
 }
 
 interface ComponentCardProps {
